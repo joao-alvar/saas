@@ -1,0 +1,20 @@
+.button {
+  padding: var(--button-padding-vertical) var(--button-padding-horizontal);
+  font-size: var(--button-font-size);
+  border: none;
+  cursor: pointer;
+  border-radius: var(--button-radius-border);
+  border-width: var(--button-border-width);
+  border-color: var(--color-primary);
+  border-style: var(--button-border-style);
+}
+
+.primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.secondary {
+  background-color: transparent;
+  color: var(--color-primary);
+}
