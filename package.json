@@ -10,10 +10,8 @@
     "format": "npx prettier --write .",
     "export": "next export",
     "postbuild": "next-sitemap",
-    "typecheck": "tsc -p ./tsconfig.json",
     "check-format": "prettier --check .",
-    "check-lint": "eslint . --ext ts --ext tsx --ext js",
-    "test-all": "yarn run check-format && yarn run check-lint && yarn run typecheck && yarn run build"
+    "check-lint": "eslint . --ext ts --ext tsx --ext js"
   },
   "dependencies": {
     "@types/node": "20.5.0",

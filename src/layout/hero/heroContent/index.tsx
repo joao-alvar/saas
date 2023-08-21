@@ -3,17 +3,19 @@ import styles from './styles.module.scss'
 import Image from 'next/image'
 
 interface ContentProps {
+  preTitle?: string
   title: string
   text?: string
   children: ReactNode
   imagePath: any
   imageAlt: string
-  imageWidth: number
-  imageHeight: number
+  imageWidth?: number
+  imageHeight?: number
   priority?: true | false
 }
 
 const HeroContent: React.FC<ContentProps> = ({
+  preTitle,
   title,
   text,
   children,
@@ -26,7 +28,10 @@ const HeroContent: React.FC<ContentProps> = ({
   return (
     <div className={styles.wrap}>
       <div className={styles.content__wrap}>
-        <div className={styles.title}>{title}</div>
+        <div>
+          <div className={styles.pre__title}>{preTitle}</div>
+          <div className={styles.title}>{title}</div>
+        </div>
         <div className={styles.text}>{text}</div>
         <div>{children}</div>
       </div>

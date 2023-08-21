@@ -90,7 +90,11 @@ const SelectionList: React.FC<SelectionListProps> = ({label, className}) => {
           height={item.height}
           title={item.title}
           text={item.text}
-          className={isActive === index ? styles.active__content : styles.content__not__active}
+          className={
+            isActive === index
+              ? styles.active__content
+              : styles.content__not__active
+          }
         ></SelectionContent>
       ))}
     </>

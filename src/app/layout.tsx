@@ -9,6 +9,7 @@ const inter = Inter({
   subsets: ['latin'],
   weight: ['300', '400', '500', '700'],
   style: ['normal'],
+  display: 'swap',
   variable: '--font-secondary',
 })
 
@@ -17,6 +18,7 @@ const roboto = Roboto({
   subsets: ['latin'],
   weight: ['300', '400', '500', '700'],
   style: ['normal'],
+  display: 'swap',
   variable: '--font-primary',
 })
 

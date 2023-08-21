@@ -12,8 +12,6 @@ function HeroHome() {
         title="AI + Data + CRM = more sales and happier customers."
         text="Get the B2B data and software you need to connect with and close your most valuable buyers — all in one operating system."
         imagePath={Image}
-        imageWidth={500}
-        imageHeight={500}
         imageAlt="A women singing"
         priority={true}
       >
