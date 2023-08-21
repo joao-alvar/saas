@@ -1,20 +1,23 @@
+import Navbar from 'layout/header/navbar'
 import '../styles/globals.scss'
 import type {Metadata} from 'next'
-import {Archivo} from 'next/font/google'
+import {Inter} from 'next/font/google'
 import {Roboto} from 'next/font/google'
 
-const roboto = Roboto({
+// primary font
+const inter = Inter({
   subsets: ['latin'],
-  weight: ['300', '400', '700'],
+  weight: ['300', '400', '500', '700'],
   style: ['normal'],
-  variable: '--font-roboto',
+  variable: '--font-secondary',
 })
 
-const archivo = Archivo({
+// Secondary font
+const roboto = Roboto({
   subsets: ['latin'],
-  weight: ['300', '400', '700'],
+  weight: ['300', '400', '500', '700'],
   style: ['normal'],
-  variable: '--font-archivo',
+  variable: '--font-primary',
 })
 
 export const metadata: Metadata = {
@@ -26,8 +29,9 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <html lang="en">
       <body
-        className={`${roboto.className} ${roboto.variable} ${archivo.variable}`}
+        className={`${roboto.className} ${roboto.variable} ${inter.variable}`}
       >
+        <Navbar />
         {children}
       </body>
     </html>

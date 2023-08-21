@@ -1,12 +1,29 @@
-import Image from 'next/image'
-import Button from 'components/ui/button/Button'
+import HomeCallToAction from 'modules/home/callToAction'
+import HeroHome from 'modules/home/hero'
+import SectionTwo from 'modules/home/section-2'
+import SectionThree from 'modules/home/section-3'
+import SectionFour from 'modules/home/section-4'
+import SectionFive from 'modules/home/section-5'
+import SectionSix from 'modules/home/section-6'
 
 export default function Home() {
   return (
     <main>
-      <Button href="/" variant="primary">
-        Hello world!
-      </Button>
+      <HeroHome />
+      <SectionTwo />
+      <SectionThree />
+      <SectionFour />
+      <SectionFive />
+      <SectionSix />
+      <HomeCallToAction />
+      {/* <ButtonContainer>
+        <Button href="/" variant="primary">
+          Start free trial
+        </Button>
+        <Button href="/" variant="secondary">
+          Start free trial
+        </Button>
+      </ButtonContainer> */}
       {/* <div className={styles.description}>
         <p>
           Get started by editing&nbsp;

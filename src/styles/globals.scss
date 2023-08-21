@@ -1,5 +1,3 @@
-@use './page.module.scss' as *;
-
 // variables
 :root {
   --font-mono: system-ui, -apple-system, BlinkMacSystemFont, ui-monospace, Menlo,
@@ -7,51 +5,70 @@
     'Ubuntu Monospace', 'Source Code Pro', 'Fira Mono', 'Droid Sans Mono',
     'Courier New', monospace;
 
-  // --foreground-rgb: 0, 0, 0;
-  // --background-start-rgb: 214, 219, 220;
-  // --background-end-rgb: 255, 255, 255;
-
-  // --primary-glow: conic-gradient(
-  //   from 180deg at 50% 50%,
-  //   #16abff33 0deg,
-  //   #0885ff33 55deg,
-  //   #54d6ff33 120deg,
-  //   #0071ff33 160deg,
-  //   transparent 360deg
-  // );
-  // --secondary-glow: radial-gradient(
-  //   rgba(255, 255, 255, 1),
-  //   rgba(255, 255, 255, 0)
-  // );
-
   // Colors
   --color-primary: #0c4534;
+  --color-link-text: #292929;
+  --color-light-dark-text: #1e1b1b;
+  --button-text-color-primary: #ffffff;
+  --button-text-color-secondary: #0c4534;
+  // --color-light-black: #16140c;
   --color-white: #ffffff;
+  --color-navbar: #ffffff;
+  --color-navbar-border: rgb(223, 227, 231);
   --color-black: #000000;
   --color-blue: #a6d9ff;
   --color-yellow: #f9f748;
-  --color-light-black: #231f20;
   --color-grey: #d9d9d9;
   --color-dark-grey: #4c4c4c;
   --color-light-grey: #e7e5e6;
-  --color-light: #e2dccc;
+  --color-light: #dae0ec;
+  // --color-light: #e2dccc;
   --color-light-yellow: #fbeeca;
+  --color-button-hover: #2a9b5f;
 
   // Sizes
   --max-width: 1800px;
-  --size-h1: 1rem;
-  --size-h2: 2rem;
   --nav-header-height: 72px;
   --button-radius-border: 4px;
   --button-border-width: 2px;
-  --button-padding-vertical: 14px;
-  --button-padding-horizontal: 16px;
-  --button-font-size: 1rem;
+  --button-padding-vertical: 8px;
+  --button-padding-horizontal: 36px;
+  --button-nav-padding-vertical: 6px;
+  --button-nav-padding-horizontal: 30px;
+  --button-line-height: 24px;
+  --page-padding-horizontal: 3rem;
+  --section-padding-vertical: 3rem;
+  --border-radius: 12px;
 
+  // Font sizes
+  --font-size-h1: 3.8rem;
+  --button-text-weight: 500;
+  --font-weight-h1: 600;
+  --font-weight-nav-links: 500;
+  --hero-title-padding-top: 6rem;
+  --font-size-hero-text: 1.2rem;
+  --hero-line-height: 25px;
+  --medium-line-height: 30px;
+  --paragraph-line-height: 25px;
+  --paragraph-font-weight: 400;
+  --button-font-size: 1rem;
+  --font-size-nav-links: 1rem;
+  --font-section-title-size: 2.1rem;
+  --font-size-small-title: 1.7rem;
+  --font-section-title-weight: 600;
+
+  // Styles
   --button-border-style: solid;
+  --button-text-decoration: none;
+  --border-params: solid 1px;
 
   //  Breakpoints
-  // --xs: ;
+  --xs-breakpoints: '400px'; // for small screen mobile
+  --sm-breakpoints: '600px'; // for mobile screen
+  --md-breakpoints: '910px'; // for tablets
+  --lg-breakpoints: '1160px'; // for laptops
+  --xl-breakpoints: '1440px'; // for desktop / monitors
+  --xxl-breakpoints: '1920px'; // for big screens
 }
 
 * {
@@ -66,7 +83,7 @@ body {
   font-size: 16px;
   font-style: normal;
   line-height: 1;
-  color: var(--color-black);
+  color: var(--color-light-dark-text);
   background-color: var(--color-white);
 }
 
@@ -97,7 +114,8 @@ main {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 6rem;
+  padding-left: var(--page-padding-horizontal);
+  padding-right: var(--page-padding-horizontal);
   margin-top: var(--nav-header-height);
 }
 

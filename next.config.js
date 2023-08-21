@@ -16,14 +16,14 @@ const nextConfig = {
   images: {
     formats: ['image/avif', 'image/webp'],
   },
-  async headers() {
-    return [
-      {
-        source: '/:path*',
-        headers: nextSafe({isDev}),
-      },
-    ]
-  },
+  // async headers() {
+  //   return [
+  //     {
+  //       source: '/:path*',
+  //       headers: nextSafe({isDev}),
+  //     },
+  //   ]
+  // },
 }
 
 module.exports = nextConfig
